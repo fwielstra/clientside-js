@@ -46,3 +46,33 @@
 9. Introduce RequireJS, separate each model/collection/view/router in its own file.
 10. Appendix: RequireJS text, for loading templates.
 
+11. Workshop; fiddle around, use various templating libraries, etc. list:
+
+Logic-less templates
+(contain simple statements for conditionals, including other templates and looping)
+
+mustache
+dust.js
+handlebars
+Hogan.js
+Google Closure Templates
+Nun
+Mu
+kite
+	
+Embedded Javascript
+(allow javascript statements in code, not unlike JSP or ERB or PHP or w/e)
+
+underscore.js
+Jade
+haml-js
+jQote2
+doT
+Stencil
+Parrot
+Eco
+EJS
+jQuery templates
+node-asyncEJS
+Labels:
+

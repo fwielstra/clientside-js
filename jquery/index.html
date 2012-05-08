@@ -10,6 +10,7 @@
 	<![endif]-->
 </head>
 <body>
+
 	<section id="todoapp">
 		<header id="header">
 			<h1>todos</h1>
@@ -25,11 +26,14 @@
 			<button id="clear-completed">Clear completed</button>
 		</footer>
 	</section>
+
 	<footer id="info">
 		<p>Double-click to edit a todo</p>
 		<p>App and template by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p>
 		<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 	</footer>
+
+	<!-- Handlebars template -->	
 	<script type="text/x-handlebars-template" id="todo-template">
 	{{#this}}
 	<li {{#if completed}}class="completed"{{/if}} data-id="{{id}}">
@@ -42,6 +46,7 @@
 	</li>
 	{{/this}}
 	</script>
+
 	<script src="../../assets/base.js"></script>
 	<script src="../../assets/jquery.min.js"></script>
 	<script src="../../assets/handlebars.min.js"></script>
