@@ -1,3 +1,16 @@
+
+// Classic jQuery:
+
+$(document).ready(function() {
+  $.get('api/todos', function(todos) {
+  	$.each(todos, function(todo) {
+  		$('ul.todos').append('<li>' + todo + '</li>');
+  	});
+  });
+});
+
+// neater, module pattern jQuery:
+
 /*global jQuery, Handlebars */
 jQuery(function( $ ) {
 	'use strict';
