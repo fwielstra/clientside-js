@@ -1,0 +1,48 @@
+
+
+1. jQuery-based webapps
+
+ basically, start with fetching something using jquery and inserting it into the document:
+ 
+  $(document).ready(function() {
+ 	  $.get('api/todos', function(todos) {
+		  $.each(todos, function(todo) {
+		    $('ul.todos').append('<li>' + todo + '</li>');
+		  });
+    });
+  });
+
+2. Text about separation of concerns, modularity, inlining HTML, and the mistakes of the previous decade.
+
+3. Introduce templating, text about how this is much neater, HTML separated from data & data retrieval. Still a lot of boilerplate, though.
+
+	<script id="todoListTemplate" type="text/x-jquery-tmpl">
+	  <ul>
+	  	{{each todos}}
+	  		<li>${value}</li>
+	  </ul>
+	</script>
+
+	$(document).ready(function() {
+	  // compile the template
+	  $('#todoListTemplate').template('todoListTemplate');
+	  
+   	$.get('api/todos', function(todos) {
+   		$.tmpl('todoListTemplate', todos).appendTo('body');
+  	});
+  	
+  	$('#todos button.add').click(function(evt) {
+	  	// add a todo to the list
+	  	// submit the contents to the server's api after submit
+  	});
+  });
+
+4. Text about how this would look like in larger applications; module pattern, etc. Also, still mix between 'logic' (what to get when) and 'model' (the data, represented in this case as simple objects). May need an example of data transformations or validation; maybe introduce underscore?
+
+5. Introduce BackboneJS; routers.
+6. Models and Collections
+7. Views (also, mustache, handlebars, etc etc etc)
+8. Blah about project structure; larger, more complex applications, maintainability, large lumps of neatly organized / separated code in files, and also templates as blocks inside HTML.
+9. Introduce RequireJS, separate each model/collection/view/router in its own file.
+10. Appendix: RequireJS text, for loading templates.
+
